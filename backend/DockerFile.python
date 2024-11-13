@@ -1,0 +1,15 @@
+FROM python:3.11
+
+ENV PYTHONUNBUFFERED 1
+
+WORKDIR /app
+
+COPY backend/requirements.txt /app/requirements.txt
+
+RUN python -m pip install --upgrade pip && \
+    pip install pip-tools && \
+    pip install -r /app/requirements.txt
+
+COPY backend /app
+
+CMD ["bash", "-c", "python manage.py wait_for_db && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
