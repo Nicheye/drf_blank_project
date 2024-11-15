@@ -30,12 +30,12 @@ services:
       context: .
       dockerfile: backend/DockerFile.python
     command: >
-      sh -c "celery -A acting beat --loglevel=info &&
-             celery -A acting worker --loglevel=info -P eventlet" # Change eventlet to gevent for lighter worker pool
+      sh -c "celery -A src beat --loglevel=info &&
+             celery -A src worker --loglevel=info -P eventlet" # Change eventlet to gevent for lighter worker pool
     volumes:
       - ./backend:/app/backend
     depends_on:
-      - app
+      - backend
       - redis
 
   db:
