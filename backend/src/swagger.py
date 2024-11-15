@@ -5,7 +5,7 @@ from rest_framework import permissions
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="TEST TASK API",
+      title="Good Blank Api Docs",
       default_version='v1',
       description="Education api",
       terms_of_service="https://www.google.com/policies/terms/",
