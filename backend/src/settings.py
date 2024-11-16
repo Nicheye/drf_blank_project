@@ -198,7 +198,4 @@ MEDIA_ROOT = 'backend/media'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-if DEBUG:
-    BASE_URL = 'http://127.0.0.1:8000/'
-else:
-    BASE_URL = 'https://educ_test_task/'
+BASE_URL = 'http://127.0.0.1:8000/'

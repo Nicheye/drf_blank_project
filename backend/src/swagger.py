@@ -7,7 +7,7 @@ schema_view = get_schema_view(
    openapi.Info(
       title="Good Blank Api Docs",
       default_version='v1',
-      description="Education api",
+      description="Blank api",
       terms_of_service="https://www.google.com/policies/terms/",
       contact=openapi.Contact(email="contact@yourapi.local"),
       license=openapi.License(name="BSD License"),
